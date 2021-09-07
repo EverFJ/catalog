@@ -26,7 +26,12 @@ class App extends React.Component {
           <Route exact path="/">
             <Home movies={this.state.movies} />
           </Route>
-          <Route path="/movie/:id" component={Movie}>
+          <Route
+            path="/movie/:id"
+            component={Movie}
+            // render={(props) => <Movie movies={this.state.movies}
+            // />}
+          >
             {/* <Movie movies={this.state.movies} /> */}
           </Route>
           <Route path="*" component={Error} />

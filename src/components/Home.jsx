@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
       <>
         {this.props.movies.map((elem) => (
-          <Link to={`movie/${elem.id}`}>
+          <Link key={elem.id} to={`movie/${elem.id}`}>
             <img src={elem.image} alt="" />
           </Link>
         ))}
