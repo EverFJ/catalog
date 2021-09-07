@@ -5,6 +5,20 @@ import Error from "./components/Error";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      movies: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch("./movies.json")
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ movies: data });
+      });
+  }
   render() {
     return (
       <BrowserRouter>

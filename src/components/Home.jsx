@@ -2,8 +2,6 @@ import React from "react";
 // import movies from "../movies.json";
 import { Link } from "react-router-dom";
 
-let movies = [];
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +19,7 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log("movies", this.state.movies);
+    // console.log("movies", this.state.movies);
     return (
       <ul>
         {this.state.movies.map((elem) => (
