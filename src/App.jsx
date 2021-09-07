@@ -23,8 +23,12 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/movie/:id" component={Movie} />
+          <Route exact path="/">
+            <Home movies={this.state.movies} />
+          </Route>
+          <Route path="/movie/:id" component={Movie}>
+            {/* <Movie movies={this.state.movies} /> */}
+          </Route>
           <Route path="*" component={Error} />
         </Switch>
       </BrowserRouter>

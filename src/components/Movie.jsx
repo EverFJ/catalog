@@ -3,6 +3,8 @@ import movies from "../movies.json";
 
 class Movie extends React.Component {
   render() {
+    // console.log("props", this.props);
+    // const movies = this.props.movies;
     const id = this.props.match.params.id;
     const movie = movies.find((elem) => elem.id.toString() === id);
     return (
